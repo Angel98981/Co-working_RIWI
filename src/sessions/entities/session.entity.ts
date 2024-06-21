@@ -23,7 +23,7 @@ export class Session {
   duration: any;
 
   @Column({ length: 150 })
-  description: string;
+  session_description: string;
 
   @ManyToOne(() => Room, (room) => room.sessions)
   room: Room;

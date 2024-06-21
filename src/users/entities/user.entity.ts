@@ -7,13 +7,13 @@ export class User {
   user_id: number;
 
   @Column({ length: 45 })
-  name: string;
+  user_name: string;
 
   @Column({ length: 45 })
-  email: string;
+  user_email: string;
 
   @Column()
-  phone: number;
+  user_phone: number;
 
   @OneToMany(() => Reservation, (reservation) => reservation.user)
   reservations: Reservation[];

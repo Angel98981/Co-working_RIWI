@@ -18,7 +18,7 @@ export class Reservation {
   session_id: number;
 
   @Column({ length: 45 })
-  status: string;
+  reservation_status: string;
 
   @ManyToOne(() => User, (user) => user.reservations)
   user: User;

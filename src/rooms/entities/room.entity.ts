@@ -8,16 +8,16 @@ export class Room {
   room_id: number;
 
   @Column({ length: 45 })
-  name: string;
+  room_name: string;
 
   @Column({ length: 150 })
-  description: string;
+  room_description: string;
 
   @Column()
-  rows: number;
+  total_rows: number;
 
   @Column()
-  columns: number;
+  total_columns: number;
 
   @OneToMany(() => Workspace, (workspace) => workspace.room)
   workspaces: Workspace[];

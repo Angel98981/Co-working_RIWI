@@ -23,7 +23,7 @@ export class Workspace {
   column: string;
 
   @Column({ length: 45 })
-  status: string;
+  workspace_status: string;
 
   @ManyToOne(() => Room, (room) => room.workspaces)
   room: Room;
