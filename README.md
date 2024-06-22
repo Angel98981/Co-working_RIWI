@@ -1,30 +1,53 @@
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
+  <img src="https://riwi.io/wp-content/uploads/2023/07/Fondo-claro-logo.png" width="500" alt="Nest Logo" />
 </p>
 
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
 [circleci-url]: https://circleci.com/gh/nestjs/nest
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+  
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+<p align="center">This project aims to develop a backend API using NestJs and TyperoORM to manage the reservation of workspaces in a coworking. Users will be able to reserve spaces for specific sessions, which will facilitate the management of space occupancy and improve the user experience.</p>
+    <p align="center">
+
+## Key Features
+
+1. **Project Configuration**:
+ - Use of NestJS with TypeScript.
+ - Application of the MVC (Model-View-Controller) design pattern following the NestJS conventions.
+
+2. **Integration with the Database**:
+ - API connection with a PostgreSQL database.
+ - Use of TypeORM as ORM for interaction with the database.
+
+3. **API Endpoints**:
+ - Get the list of workspaces available in a room for a specific session.
+ - Get the list of occupied workspaces in a room for a specific session.
+ - Get the sessions ordered by the busiest.
+ - Get the sessions ordered by the most available.
+ - Get the list of workspaces assigned to a user.
+ - Get the list of workspaces assigned to a session.
+
+4. **Data Validation**:
+ - Implemented data validation in API requests using `class-validator` and `class-transformer`.
+ - Proper handling of validation errors and other errors, returning appropriate HTTP responses.
+
+5. **Documentation**:
+ - Clear README with instructions to configure and run the project locally.
+ - Interactive documentation of API endpoints using Swagger/OpenAPI.
+
+6. **Tests**:
+ - Implementation of functional tests for the API, demonstrated through a video with Postman.
+
+7. **GitFlow and Good Development Practices**:
+ - GitFlow workflow tracking for code branch and version management.
+ - Application of SOLID design principles and other good practices to maintain clean, maintainable and scalable code.
+
+8. **Deployment**:
+ - Preparation of the project for deployment in a production environment and deployment from the `main` branch.
+
 
 ## Installation
 
@@ -47,27 +70,22 @@ $ npm run start:prod
 
 ## Test
 
-```bash
-# unit tests
-$ npm run test
+unit tests are not performed
 
-# e2e tests
-$ npm run test:e2e
+## Swagger
 
-# test coverage
-$ npm run test:cov
-```
+http://localhost:3000/api-doc#/
 
-## Support
+## DB Connection
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+I'm using Vercel.
 
-## Stay in touch
+### .env
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+```env
+DB_CONNECTION=postgres
+DB_HOST=ep-rapid-truth-a4ucx8hj-pooler.us-east-1.aws.neon.tech
+DB_PORT=5432
+DB_NAME=verceldb
+DB_USER=default
+DB_PASSWORD=7ahto4HQByIN
